@@ -11,9 +11,11 @@ cp -r fonts/* ~/.fonts
 cp -r Wallpapers/* ~/Wallpapers
 echo "Done. Dotfiles has been installed!"
 echo " Creating symlnks...."
-wal -i ~/Wallpapers/Leaves.jpg --saturate 0.2 --backend colorz
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
 ln -sf ~/.cache/wal/hyprlock.conf ~/.config/hypr/hyprlock.conf
 ln -sf ~/.cache/wal/mako-config ~/.config/mako/config
 ln -sf ~/.cache/wal/alacritty.toml ~/.config/alacritty/alacritty.toml
+wal -i ~/Wallpapers/die_alone.png --backend colorz --saturate 0.2 -s -t
+walogram
+pywalfox update
 echo "Done!"

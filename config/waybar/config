@@ -1,35 +1,29 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 48,
+    "position": "bottom",
+    "height": 32,
     "margin": "0, 0, 0, 0",
 
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["battery", "clock", "custom/weather"],
+    "modules-left": ["clock","hyprland/workspaces"],
+    "modules-center": [],
     "modules-right": ["tray", "wireplumber", "network", "hyprland/language", "custom/powermenu"],
 
-    // MODULE CONFIG
-
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "none": "",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-none": "",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
+	"hyprland/workspaces": {
+	    "on-scroll-up": "hyprctl dispatch workspace r-1",
+	    "on-scroll-down": "hyprctl dispatch workspace r+1",
+	    "on-click": "activate",
+	    "active-only": false,
+	    "all-outputs": true,
+	    "format": "{}",
+	    "format-icons": {
+	      "urgent": "",
+	      "active": "",
+	      "default": ""
+	    },
+	    "persistent-workspaces": {
+	      "*": 5
+		},
+},
 
     "hyprland/window": {
         "max-length": 40,
@@ -64,15 +58,15 @@
     },
 
     "cpu": {
-        "interval": 30,
-        "format": " {usage}%",
+        "interval": 3,
+        "format": "C{usage}%",
         "min-length": 7
     },
 
     "disk": {
         "interval": 30,
-        "format": " {percentage_used}%",
-        "path": "/"
+        "format": "D{percentage_used}%",
+        "path": "/home"
     },
 
     "idle_inhibitor": {
@@ -95,7 +89,7 @@
 
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": "M{}%",
         "min-length": 7
     },
 
@@ -131,7 +125,7 @@
 
     "wireplumber": {
         "format": "{icon} {volume}%",
-    "format-bluetooth": " {volume}%",
+    "format-bluetooth": "V{volume}%",
     "format-muted": "",
     "format-icons": {
         "headphone": "",

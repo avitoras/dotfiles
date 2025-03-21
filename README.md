@@ -1,11 +1,7 @@
-# Дотфайлы сапога с Monet
-__Реворк моих старых дотфайлов__
+# Дотфайлы авитораса с ыыыааа северсталь
 
-![Скрин 1](/docs/screen1.jpg)
+![Скрин 1](/docs/screen.png)
 
-![Скрин 2](/docs/screen2.jpg)
-
-![Скрин 3](/docs/screen3.jpg)
 ## Что используется
 | Для чего      | Утилита          |
 | ------------- | ---------------- |
@@ -15,7 +11,6 @@ __Реворк моих старых дотфайлов__
 | File Manager  | Nautilus         |
 | Fetch         | FastFetch        |
 | Shell         | Fish             |
-| Text Editor   | Emacs            |
 | Launcher      | Rofi             |
 | Bar           | Waybar           |
 | Theme picker  | Pywal            |

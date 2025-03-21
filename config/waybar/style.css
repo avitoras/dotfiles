@@ -15,7 +15,7 @@
 }
 
 #workspaces, #window {
-    border-radius: 13px;
+    border-radius: 5px;
     margin: 6px 0;
     margin-left: 6px;
     padding: 0 10px;
@@ -56,42 +56,41 @@ window#waybar.empty #window {
     color: @color6;
 }
 
+#clock {
+	margin: 6px 0;
+  	padding: 0 11px;
+  	margin-left: 6px;
+  	border-radius: 5px;
+  	min-width: 8px;
+  	background-color: @color8;
+  	color: @foreground;
+}
 
-#mode, #bluetooth, #cpu, #disk, #memory, #temperature, #network, #wireplumber, #idle_inhibitor, #backlight, #mpd, #clock, #temperature, #language, #custom-powermenu {
-    margin: 6px 0px;
+#mode, #bluetooth, #cpu, #disk, #memory, #temperature, #network, #wireplumber, #idle_inhibitor, #backlight, #mpd, #temperature, #language, #custom-powermenu {
+    margin: 6px 0;
     padding: 0 11px;
     margin-right: 6px;
-    border-radius: 13px;
+    border-radius: 5px;
     min-width: 8px;
     background-color: @color8;
     color: @foreground;
-}
-
-#language {
-    min-width: 16px;
 }
 
 #wireplumber, #backlight {
     min-width: 64px;
 }
 
-#clock {
-    margin: 8px 0;
-    background-color: transparent;
-    color: @foreground;
-    padding: 0 0;
-  }
 
 #tray {
     padding: 0 7px;
     margin: 6px 0;
     margin-right: 6px;
-    border-radius: 13px;
+    border-radius: 5px;
     background-color: @color8;
 }
 
 #language {
-    min-width: 16px;
+    min-width: 17px;
 }
 
 #wireplumber, #backlight {
